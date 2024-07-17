@@ -11,6 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: composer --version
+        run: composer --version
+        working-directory: ./loadmap
+
       - name: composer update
         run: composer update
         working-directory: ./loadmap
