@@ -7,9 +7,15 @@ on:
 
 jobs:
   ftp-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v3
+
+      - name: Setup PHP with PECL extension
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: imagick, swoole
 
       - name: composer --version
         run: composer --version
