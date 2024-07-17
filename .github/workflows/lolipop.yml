@@ -1,8 +1,10 @@
 name: lolipop
+
 on:
   push:
     branches:
       - main
+
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
@@ -10,15 +12,15 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: composer install
-        if: steps.cache.outputs.cache-hit != 'true'
-          run: composer install
-          working-directory: ./loadmap
-        
+        if: ${{ steps.cache.outputs.cache-hit != 'true' }}
+        run: composer install
+        working-directory: ./loadmap
+
       - name: php artisan config:cache
         run: php artisan config:cache
         working-directory: ./loadmap
       
-      -name: php artisan route:cache
+      - name: php artisan route:cache
         run: php artisan route:cache
         working-directory: ./loadmap
 
