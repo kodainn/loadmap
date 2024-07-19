@@ -30,7 +30,7 @@ jobs:
           key: ${{ secrets.LOLIPOP_SSH_KEY }}
           port: ${{secrets.SSH_PORT}}
           script: |
-            cd www/loadmap
+            cd web/loadmap
             git pull origin main
             php artisan config:cache
             php artisan route:cache
