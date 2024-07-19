@@ -28,6 +28,7 @@ jobs:
           host: ${{ secrets.LOLIPOP_HOST_NAME }}
           username: ${{ secrets.LOLIPOP_USER_NAME }}
           key: ${{ secrets.LOLIPOP_SSH_KEY }}
+          port: ${{secrets.SSH_PORT}}
           script: |
             cd www/loadmap
             git pull origin main
