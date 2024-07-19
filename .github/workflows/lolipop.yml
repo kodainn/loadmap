@@ -39,5 +39,7 @@ jobs:
               /usr/local/php/8.3/bin/php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
             fi
             /usr/local/php/8.3/bin/php composer.phar install
+            /usr/local/php/8.3/bin/php artisan migrate
+            /usr/local/php/8.3/bin/php artisan key:generate
             /usr/local/php/8.3/bin/php artisan config:cache
             /usr/local/php/8.3/bin/php artisan route:cache
