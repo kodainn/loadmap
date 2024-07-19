@@ -30,12 +30,15 @@ jobs:
           key: ${{ secrets.LOLIPOP_SSH_KEY }}
           port: ${{secrets.LOLIPOP_SSH_PORT}}
           script: |
-            cd web/loadmap
-            if [ -d ".git" ]; then
+            cd web
+            if [ -d "loadmap" ]; then
+              cd loadmap
               git pull origin main
             else
-              git clone https://github.com/kodainn/loadmap .
+              git clone https://github.com/kodainn/loadmap
+              cd loadmap
+              /usr/local/php/8.3/bin/php -r "eval('?>'.file_get_contents('https://getcomposer.org/installer'));"
             fi
-            composer install
-            php artisan config:cache
-            hp artisan route:cache
+            /usr/local/php/8.3/bin/php composer.phar install
+            /usr/local/php/8.3/bin/php artisan config:cache
+            /usr/local/php/8.3/bin/php artisan route:cache
