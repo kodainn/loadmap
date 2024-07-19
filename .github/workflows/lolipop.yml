@@ -20,7 +20,6 @@ jobs:
       - name: composer install
         if: ${{ steps.cache.outputs.cache-hit != 'true' }}
         run: composer install
-        working-directory: ./loadmap
 
       - name: Deploy to lolipop
         uses: appleboy/ssh-action@master
