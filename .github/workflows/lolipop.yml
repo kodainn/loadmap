@@ -31,6 +31,11 @@ jobs:
           port: ${{secrets.LOLIPOP_SSH_PORT}}
           script: |
             cd web/loadmap
-            git pull origin main
-            php artisan config:cache
-            php artisan route:cache
+            if [ -d ".git" ]; then
+              git pull origin main
+            else
+              git clone https://github.com/kodainn/loadmap .
+            fi
+            composer install
+            /usr/local/php/8.3/bin/php artisan config:cache
+            /usr/local/php/8.3/bin/php artisan route:cache
