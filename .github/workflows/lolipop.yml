@@ -1,9 +1,13 @@
-name: lolipop
+name: lolipop-deploy
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
+    types: [closed]
 
 jobs:
   lolipop-deploy:
@@ -36,3 +40,15 @@ jobs:
             /usr/local/php/8.3/bin/php artisan key:generate
             /usr/local/php/8.3/bin/php artisan route:clear
             /usr/local/php/8.3/bin/php artisan config:clear
+      
+      - name: Build project
+        run: npm install && npm run build
+
+      - name: ftp-react-build-file-upload
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.LOLIPOP_FTP_SERVER }}
+          username: ${{ secrets.LOLIPOP_FTP_USERNAME }}
+          password: ${{ secrets.LOLIPOP_FTP_PASSWORD }}
+          server-dir: web/loadmap/public/
+          local-dir: ./public/build/
