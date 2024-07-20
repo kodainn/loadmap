@@ -51,4 +51,4 @@ jobs:
           username: ${{ secrets.LOLIPOP_FTP_USERNAME }}
           password: ${{ secrets.LOLIPOP_FTP_PASSWORD }}
           server-dir: web/loadmap/public/
-          local-dir: ./public/build/
+          local-dir: ./public/build
