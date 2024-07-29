@@ -9,8 +9,8 @@ const Container: React.FC = () => {
     const testClick = () => alert(1);
     const scrollY = useScrollY();
     const { url } = usePage();
-    const path = url.split('/')[3] ?? "";
-    const isSmSize = useMediaQuery(BREAK_POINT.MAX_WEIGHT_SM);
+    const path = url.split('/')[1] ?? "";
+    const isSmSize = useMediaQuery(BREAK_POINT.WEIGHT_LANGE_SM);
 
 
     return (

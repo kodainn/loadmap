@@ -6,7 +6,7 @@ import { ComponentProps } from "./type";
 
 const Component: React.FC<ComponentProps> = ({ size }) => {
     return (
-        <Link href={route("search")} style={{textDecoration: "none", display: 'block', color: "black" }}>
+        <Link href={route("search.index")} style={{textDecoration: "none", display: 'block', color: "black" }}>
             <SearchIcon fontSize={size} />
         </Link>
     );
