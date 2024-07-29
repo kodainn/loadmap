@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class TempUser extends Model
 {
     use HasFactory;
 
@@ -13,8 +13,8 @@ class User extends Model
         'name',
         'email',
         'password',
-        'icon_path',
-        'first_name',
-        'last_name'
+        'token'
     ];
+    
+    
 }
