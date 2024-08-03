@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Usecases\RegisterUser;
 
 use App\Models\TempUser;
