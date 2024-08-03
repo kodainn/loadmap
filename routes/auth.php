@@ -21,3 +21,5 @@ Route::middleware('guest')->group(function () {
         Route::post('login', 'store');
     });
 });
+
+Route::get('/logout', [AuthenticatedSessionController::class, 'destroy']);

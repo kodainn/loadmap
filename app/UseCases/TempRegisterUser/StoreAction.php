@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Usecases\TempRegisterUser;
 
 use App\Http\Requests\TempRegisterUser\StoreRequest;
