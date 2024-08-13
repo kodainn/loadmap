@@ -12,13 +12,16 @@ use Illuminate\Support\Str;
 
 class StoreAction
 {
-    public function __invoke(StoreRequest $request, TempUser $tempUser): void
+    public function __invoke(
+        StoreRequest $request,
+        TempUser $tempUserModel
+    ): void
     {
         $createTempUser = $request->all();
         $createTempUser['token'] = Str::random(64);
         $createTempUser['password'] = Hash::make($request->password);
 
-        $createdTempUser = $tempUser->create($createTempUser);
+        $createdTempUser = $tempUserModel->create($createTempUser);
         SendRegisterUserMailJob::dispatch($createdTempUser->email, $createdTempUser->token);
     }
 }

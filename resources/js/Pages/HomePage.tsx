@@ -1,8 +1,23 @@
 import HomeLayout from "@/Components/templates/HomeLayout";
+import { HomeResponse } from "@/interfaces/HomeResponse";
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC<HomeResponse> = ({
+    auth,
+    errors,
+    flash,
+    marking_tags,
+    ranking_articles,
+    recommended_articles
+}) => {
     return (
-        <HomeLayout />
+        <HomeLayout
+            auth={auth}
+            errors={errors}
+            flash={flash}
+            marking_tags={marking_tags}
+            ranking_articles={ranking_articles}
+            recommended_articles={recommended_articles}
+        />
     );       
 }
 

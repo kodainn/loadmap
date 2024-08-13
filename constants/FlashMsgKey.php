@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Constants;
 
 class FlashMsgKey
 {
-    const ErrorMessage   = "errorMessage";
-    const SuccessMessage = "successMessage";
+    const ERROR_MESSAGE = "error_message";
+    const SUCCESS_MESSAGE = "success_message";
 }

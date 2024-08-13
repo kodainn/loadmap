@@ -36,7 +36,8 @@ class HandleInertiaRequests extends Middleware
                 'user' => $request->user(),
             ],
             'flash' => [
-                FlashMsgKey::ErrorMessage => fn () => $request->session()->get(FlashMsgKey::ErrorMessage)
+                FlashMsgKey::ERROR_MESSAGE => fn () => $request->session()->get(FlashMsgKey::ERROR_MESSAGE),
+                FlashMsgKey::SUCCESS_MESSAGE => fn () => $request->session()->get(FlashMsgKey::SUCCESS_MESSAGE)
             ],
         ];
     }
