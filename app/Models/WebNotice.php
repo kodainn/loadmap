@@ -12,6 +12,11 @@ class WebNotice extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'received_user_id',
+        'last_read_datetime'
+    ];
+
     protected $hidden = [
         'received_user_id',
         'created_at',
