@@ -37,11 +37,11 @@ class AuthenticatedSessionController extends Controller
             return to_route('home.index');
         } catch(UserNotFoundException $e) {
             return to_route('login')->with(
-                    FlashMsgKey::ErrorMessage,
+                    FlashMsgKey::ERROR_MESSAGE,
                     __('flash_message.user_not_found'));
         } catch(PasswordMismatchException $e) {
             return to_route('login')->with(
-                    FlashMsgKey::ErrorMessage,
+                    FlashMsgKey::ERROR_MESSAGE,
                     __('flash_message.password_mismatch'));
         }
     }

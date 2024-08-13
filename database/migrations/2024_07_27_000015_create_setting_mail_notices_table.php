@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('setting_main_notices', function (Blueprint $table) {
+        Schema::create('setting_mail_notices', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->boolean('is_site_notice_enable')->default(false);
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('setting_main_notice');
+        Schema::dropIfExists('setting_mail_notice');
     }
 };

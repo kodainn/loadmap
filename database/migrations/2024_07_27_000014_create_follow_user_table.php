@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('follow_users', function (Blueprint $table) {
+        Schema::create('follow_user', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('followed_user_id');
             $table->unsignedBigInteger('following_user_id');

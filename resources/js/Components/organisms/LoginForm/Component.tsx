@@ -29,7 +29,7 @@ const Component: React.FC<ComponentProps> = ({
                             marginBottom: 5
                         }}
                     >
-                        { flash.errorMessage && <Alert severity="error">{flash.errorMessage}</Alert> }
+                        { flash.error_message && <Alert severity="error">{flash.error_message}</Alert> }
                     </Box>
                     <TextField
                         label="ユーザー名"
