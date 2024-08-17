@@ -7,9 +7,6 @@ import RecommendedArticleList from "@/Components/organisms/RecommendedArticleLis
 import RankingArticleList from "@/Components/organisms/RankingArticleList/Container";
 
 const HomeLayout: React.FC<HomeResponse> = ({
-    auth,
-    errors,
-    flash,
     marking_tags,
     ranking_articles,
     recommended_articles

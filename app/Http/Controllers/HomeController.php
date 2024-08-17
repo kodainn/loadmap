@@ -5,26 +5,28 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\TagUser;
 use App\Models\User;
 use App\Usecases\MarkingTag\IndexAction as MarkingTagIndexAction;
 use App\Usecases\RecommendedArticle\IndexAction as RecommendedArticleIndexAction;
 use App\Usecases\RankingArticle\IndexAction as RankingArticleIndexAction;
+use Illuminate\Auth\AuthManager;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 class HomeController extends Controller
 {
     public function index(
-        MarkingTagIndexAction $markingTagIndexAction,
+        AuthManager                   $auth,
+        MarkingTagIndexAction         $markingTagIndexAction,
         RecommendedArticleIndexAction $recommendedArticleIndexAction,
-        RankingArticleIndexAction $rankingArticleIndexAction,
-        User $user,
-        Article $article
+        RankingArticleIndexAction     $rankingArticleIndexAction,
+        User                          $user,
+        Article                       $article
     )
     {
-        $authUser = Auth::user();
-        $markingTags = $markingTagIndexAction($user, $authUser->id);
-        $recommendedArticles = $recommendedArticleIndexAction($user, $authUser->id);
+        $markingTags = $markingTagIndexAction($user, $auth->guard()->id());
+        $recommendedArticles = $recommendedArticleIndexAction($user, $auth->guard()->id());
         $rankingArticles = $rankingArticleIndexAction($article);
 
         return Inertia::render('HomePage', [

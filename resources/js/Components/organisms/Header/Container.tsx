@@ -12,7 +12,6 @@ const Container: React.FC = () => {
     const path = url.split('/')[1] ?? "";
     const isSmSize = useMediaQuery(BREAK_POINT.WEIGHT_LANGE_SM);
 
-
     return (
         <Component
             noticeOnClick={testClick}
