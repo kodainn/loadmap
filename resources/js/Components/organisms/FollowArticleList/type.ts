@@ -1,4 +1,9 @@
-export type user = {
+type tag = {
+    id:   number,
+    name: string
+}
+
+type user = {
     id:         number,
     name:       string,
     icon_path:  string | null,
@@ -6,12 +11,7 @@ export type user = {
     last_name:  string | null
 };
 
-export type tag = {
-    id:   number,
-    name: string
-}
-
-export type article = {
+type article = {
     id:         number,
     title:      string,
     date_jp:    string,
@@ -20,13 +20,10 @@ export type article = {
     user:       user
 }
 
-export type auth = {
-    user: user
+export type ContainerProps = {
+    follow_articles: article[]
 }
 
-export type errors = {};
-
-export type flash = {
-    error_message:   string | null,
-    success_message: string | null
-};
+export type ComponentProps = {
+    follow_articles: article[]
+}
