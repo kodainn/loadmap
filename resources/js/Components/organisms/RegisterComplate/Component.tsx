@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import InertiaLinkButton from "@/Components/atoms/InertiaLinkButton/Container";
+import InertiaLinkButton from "@/Components/parts/InertiaLinkButton/Container";
 
 const Component: React.FC = () => {
     return (

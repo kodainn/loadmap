@@ -1,4 +1,4 @@
-import ArticleCard from "@/Components/molecules/ArticleCard/Container";
+import ArticleCard from "@/Components/parts/ArticleCard/Container";
 import { ComponentProps } from "./type";
 import { Stack, Typography } from "@mui/material";
 
