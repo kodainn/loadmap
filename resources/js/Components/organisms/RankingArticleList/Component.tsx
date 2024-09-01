@@ -1,6 +1,6 @@
 import { Container, Stack, Typography } from "@mui/material";
 import { ComponentProps } from "./type";
-import ArticleCard from "@/Components/parts/ArticleCard/Container";
+import ArticleCard from "@/Components/molecules/ArticleCard/Container";
 
 const Component: React.FC<ComponentProps> = ({ ranking_articles }) => {
     return (

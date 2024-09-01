@@ -1,9 +1,9 @@
 import { AppBar, Box, Typography } from "@mui/material";
-import SearchLink from "@/Components/parts/SearchLink/Container";
-import NoticePopupButton from "@/Components/parts/NoticePopupButton/Container";
-import AccountIconPopupButton from "@/Components/parts/AccountIconPopupButton/Container";
-import InertiaLinkTab from "@/Components/parts/InertiaLinkTab/Container";
-import InertiaLinkButton from "@/Components/parts/InertiaLinkButton/Container";
+import SearchLink from "@/Components/molecules/SearchLink/Container";
+import NoticePopupButton from "@/Components/molecules/NoticePopupButton/Container";
+import AccountIconPopupButton from "@/Components/molecules/AccountIconPopupButton/Container";
+import InertiaLinkTab from "@/Components/molecules/InertiaLinkTab/Container";
+import InertiaLinkButton from "@/Components/molecules/InertiaLinkButton/Container";
 import { ComponentProps } from "./type";
 import { URL_PATH } from "@/constants/UrlPath";
 
