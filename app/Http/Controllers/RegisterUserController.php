@@ -10,7 +10,6 @@ use App\Models\TempUser;
 use App\Models\User;
 use App\Models\WebNotice;
 use App\Usecases\RegisterUser\Exceptions\RegisteredUserException;
-use App\Usecases\RegisterUser\StoreAction;
 use App\Usecases\RegisterUser\StoreRegisterUserAction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;

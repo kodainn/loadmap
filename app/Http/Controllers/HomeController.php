@@ -5,13 +5,11 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Models\Article;
-use App\Models\TagUser;
 use App\Models\User;
 use App\Usecases\MarkingTag\FetchMarkingTagAction;
 use App\Usecases\RankingArticle\FetchRankingArticleAction;
 use App\Usecases\RecommendedArticle\FetchRecommendedArticleAction;
 use Illuminate\Auth\AuthManager;
-use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 
 class HomeController extends Controller
