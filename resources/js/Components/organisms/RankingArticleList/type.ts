@@ -20,7 +20,7 @@ type article = {
     user:       user
 }
 
-export type ContainerProps = {
+export type RankingArticleListProps = {
     ranking_articles: article[]
 }
 

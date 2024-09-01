@@ -1,5 +1,5 @@
 
-export type ContainerProps = {
+export type SearchFieldProps = {
     onEnterKeyDraw: () => void,
 }
 

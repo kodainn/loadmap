@@ -3,7 +3,7 @@ type tag = {
     name: string
 }
 
-export type ContainerProps = {
+export type MarkingTagListProps = {
     marking_tags: tag[]
 }
 

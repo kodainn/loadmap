@@ -1,4 +1,4 @@
-export type ContainerProps = {
+export type SearchLinkProps = {
     size: "small" | "medium" | "large"
 }
 

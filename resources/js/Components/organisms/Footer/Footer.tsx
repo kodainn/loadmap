@@ -1,9 +1,9 @@
 import Component from "./Component";
 
-const Container: React.FC = () => {
+const Footer: React.FC = () => {
     return (
         <Component />
     );
 }
 
-export default Container;
+export default Footer;

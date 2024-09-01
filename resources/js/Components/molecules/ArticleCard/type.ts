@@ -20,6 +20,6 @@ type article = {
     user:       user
 }
 
-export type ContainerProps = article;
+export type ArticleCardProps = article;
 
 export type ComponentProps = article;

@@ -1,4 +1,4 @@
-export type ContainerProps = {
+export type AccountIconPopupButtonProps = {
     onClick: () => void,
     size: "small" | "medium" | "large"
 }

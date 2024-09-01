@@ -1,9 +1,9 @@
 import Component from "./Component";
 
-const Container: React.FC = () => {
+const RegisterComplate: React.FC = () => {
     return (
         <Component />
     )
 }
 
-export default Container;
+export default RegisterComplate;

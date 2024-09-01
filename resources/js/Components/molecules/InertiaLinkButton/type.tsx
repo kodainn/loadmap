@@ -1,4 +1,4 @@
-export type ContainerProps = {
+export type InertiaLinkButtonProps = {
     size: "small" | "medium" | "large",
     href: string,
     name: string

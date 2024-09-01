@@ -1,7 +1,7 @@
 import Component from "./Component";
-import { ContainerProps } from "./type";
+import { ArticleCardProps } from "./type";
 
-const Container: React.FC<ContainerProps> = ({
+const ArticleCard: React.FC<ArticleCardProps> = ({
     id,
     title,
     date_jp,
@@ -22,4 +22,4 @@ const Container: React.FC<ContainerProps> = ({
     );
 }
 
-export default Container;
+export default ArticleCard;

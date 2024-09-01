@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import RegisterComplate from "@/Components/organisms/RegisterComplate/Container";
+import RegisterComplate from "@/Components/organisms/RegisterComplate/RegisterComplate";
 
 const RegisterComplateLayout: React.FC = () => {
     return (

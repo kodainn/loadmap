@@ -4,7 +4,7 @@ import { usePage } from "@inertiajs/react";
 import { useMediaQuery } from "@mui/material";
 import { BREAK_POINT } from "@/constants/BreakPoint";
 
-const Container: React.FC = () => {
+const Header: React.FC = () => {
 
     const testClick = () => alert(1);
     const scrollY = useScrollY();
@@ -23,4 +23,4 @@ const Container: React.FC = () => {
     );
 }
 
-export default Container;
+export default Header;

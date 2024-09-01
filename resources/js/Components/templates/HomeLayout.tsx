@@ -1,10 +1,10 @@
-import Header from "@/Components/organisms/Header/Container";
+import Header from "@/Components/organisms/Header/Header";
 import { HomeResponse } from "@/interfaces/HomeResponse";
 import { Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import MarkingTagList from "@/Components/organisms/MarkingTagList/Container";
-import RecommendedArticleList from "@/Components/organisms/RecommendedArticleList/Container";
-import RankingArticleList from "@/Components/organisms/RankingArticleList/Container";
+import MarkingTagList from "@/Components/organisms/MarkingTagList/MarkingTagList";
+import RecommendedArticleList from "@/Components/organisms/RecommendedArticleList/RecommendedArticleList";
+import RankingArticleList from "@/Components/organisms/RankingArticleList/RankingArticleList";
 
 const HomeLayout: React.FC<HomeResponse> = ({
     marking_tags,
@@ -18,7 +18,7 @@ const HomeLayout: React.FC<HomeResponse> = ({
             <Box sx={{ margin: 20}}></Box>
             <Grid container spacing={5}>
                 <Grid xs={12} md={12} lg={2}>
-                    <MarkingTagList 
+                    <MarkingTagList
                         marking_tags={marking_tags}
                     />
                 </Grid>

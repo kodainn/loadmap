@@ -4,7 +4,7 @@ import { BREAK_POINT } from "@/constants/BreakPoint";
 import { useForm } from "@inertiajs/react";
 import { FormUnion } from "./type";
 
-const Container: React.FC = () => {
+const TempRegisterForm: React.FC = () => {
 
     const isSmSize = useMediaQuery(BREAK_POINT.WEIGHT_LANGE_SM);
     const isMdSize = useMediaQuery(BREAK_POINT.WEIGHT_LANGE_MD);
@@ -23,7 +23,7 @@ const Container: React.FC = () => {
         e.preventDefault();
         post('temp-register');
     }
-    
+
     return (
         <Component
             isSmSize={isSmSize}
@@ -37,4 +37,4 @@ const Container: React.FC = () => {
     );
 }
 
-export default Container;
+export default TempRegisterForm;

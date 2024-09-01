@@ -1,8 +1,8 @@
-import Header from "@/Components/organisms/Header/Container";
-import Footer from "@/Components/organisms/Footer/Container";
+import Header from "@/Components/organisms/Header/Header";
+import Footer from "@/Components/organisms/Footer/Footer";
 import { Box } from "@mui/material";
 import { TimelineResponse } from "@/interfaces/TimelineResponse";
-import TimelineArticleList from "@/Components/organisms/TimelineArticleList/Container";
+import TimelineArticleList from "@/Components/organisms/TimelineArticleList/TimelineArticleList";
 
 const TimelineLayout: React.FC<TimelineResponse> = ({
     auth,
