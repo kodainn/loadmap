@@ -13,7 +13,7 @@ use App\Usecases\RegisterUser\Exceptions\RegisteredUserException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class StoreAction
+class StoreRegisterUserAction
 {
     public function __invoke(
         Request           $request,

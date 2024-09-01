@@ -6,7 +6,7 @@ namespace App\Http\Requests\TempRegisterUser;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreRequest extends FormRequest
+class StoreTempRegisterUserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

@@ -7,9 +7,9 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\TagUser;
 use App\Models\User;
-use App\Usecases\MarkingTag\IndexAction as MarkingTagIndexAction;
-use App\Usecases\RecommendedArticle\IndexAction as RecommendedArticleIndexAction;
-use App\Usecases\RankingArticle\IndexAction as RankingArticleIndexAction;
+use App\Usecases\MarkingTag\FetchMarkingTagAction;
+use App\Usecases\RankingArticle\FetchRankingArticleAction;
+use App\Usecases\RecommendedArticle\FetchRecommendedArticleAction;
 use Illuminate\Auth\AuthManager;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
@@ -18,16 +18,16 @@ class HomeController extends Controller
 {
     public function index(
         AuthManager                   $auth,
-        MarkingTagIndexAction         $markingTagIndexAction,
-        RecommendedArticleIndexAction $recommendedArticleIndexAction,
-        RankingArticleIndexAction     $rankingArticleIndexAction,
+        FetchMarkingTagAction         $fetchMarkingTagAction,
+        FetchRecommendedArticleAction $fetchRecommendedArticleAction,
+        FetchRankingArticleAction     $fetchRankingArticleAction,
         User                          $user,
         Article                       $article
     )
     {
-        $markingTags = $markingTagIndexAction($user, $auth->guard()->id());
-        $recommendedArticles = $recommendedArticleIndexAction($user, $auth->guard()->id());
-        $rankingArticles = $rankingArticleIndexAction($article);
+        $markingTags = $fetchMarkingTagAction($user, $auth->guard()->id());
+        $recommendedArticles = $fetchRecommendedArticleAction($user, $auth->guard()->id());
+        $rankingArticles = $fetchRankingArticleAction($article);
 
         return Inertia::render('HomePage', [
             'marking_tags'         => $markingTags,
