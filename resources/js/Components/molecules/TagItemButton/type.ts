@@ -3,6 +3,6 @@ type tag = {
     name: string
 };
 
-export type ContainerProps = tag;
+export type TagItemButtonProps = tag;
 
 export type ComponentProps = tag;

@@ -26,7 +26,7 @@ type recommended_article = {
     articles: article[]
 }
 
-export type ContainerProps = {
+export type RecommendedArticleListProps = {
     recommended_articles: recommended_article[]
 }
 

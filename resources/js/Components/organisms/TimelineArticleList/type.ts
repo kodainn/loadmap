@@ -20,7 +20,7 @@ type article = {
     user:       user
 }
 
-export type ContainerProps = {
+export type TimelineArticleListProps = {
     timeline_articles: article[]
 }
 

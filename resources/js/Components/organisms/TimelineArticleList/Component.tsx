@@ -1,5 +1,5 @@
 import { Container, Stack } from "@mui/material";
-import ArticleCard from "@/Components/molecules/ArticleCard/Container";
+import ArticleCard from "@/Components/molecules/ArticleCard/ArticleCard";
 import { ComponentProps } from "./type";
 
 const Component: React.FC<ComponentProps> = ({ timeline_articles }) => {

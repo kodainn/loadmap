@@ -4,7 +4,7 @@ import { BREAK_POINT } from "@/constants/BreakPoint";
 import { useForm, usePage } from "@inertiajs/react";
 import { FormUnion } from "./type";
 
-const Container: React.FC = () => {
+const LoginForm: React.FC = () => {
 
     const { flash } = usePage<any | undefined>().props;
 
@@ -24,7 +24,7 @@ const Container: React.FC = () => {
         e.preventDefault();
         post('login');
     }
-    
+
     return (
         <Component
             isSmSize={isSmSize}
@@ -39,4 +39,4 @@ const Container: React.FC = () => {
     );
 }
 
-export default Container;
+export default LoginForm;

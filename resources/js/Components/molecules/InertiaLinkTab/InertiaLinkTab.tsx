@@ -1,8 +1,8 @@
-import { ContainerProps } from "./type";
+import { InertiaLinkTabProps } from "./type";
 import Component from "./Component";
 
 
-const Container: React.FC<ContainerProps> = ({ name, href, isSelected = false }) => {
+const InertiaLinkTab: React.FC<InertiaLinkTabProps> = ({ name, href, isSelected = false }) => {
     return (
         <Component
             name={name}
@@ -12,4 +12,4 @@ const Container: React.FC<ContainerProps> = ({ name, href, isSelected = false })
     );
 }
 
-export default Container;
+export default InertiaLinkTab;

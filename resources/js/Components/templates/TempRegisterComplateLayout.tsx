@@ -1,4 +1,4 @@
-import TempRegisterComplate from "@/Components/organisms/TempRegisterComplate/Container";
+import TempRegisterComplate from "@/Components/organisms/TempRegisterComplate/TempRegisterComplate";
 import { Box } from "@mui/material";
 
 const TempRegisterComplateLayout: React.FC = () => {

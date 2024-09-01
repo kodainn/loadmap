@@ -1,4 +1,4 @@
-export type ContainerProps = {
+export type InertiaLinkTabProps = {
     name: string,
     href: string,
     isSelected?: boolean

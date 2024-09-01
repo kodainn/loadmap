@@ -1,6 +1,6 @@
 import { Card, Grid, List, ListSubheader, Stack, Typography } from "@mui/material";
 import { ComponentProps } from "./type";
-import TagItemButton from "@/Components/molecules/TagItemButton/Container";
+import TagItemButton from "@/Components/molecules/TagItemButton/TagItemButton";
 
 
 const Component: React.FC<ComponentProps> = ({ marking_tags }) => {
