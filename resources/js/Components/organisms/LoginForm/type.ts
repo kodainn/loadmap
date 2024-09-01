@@ -1,3 +1,5 @@
+import Flash from "@/commonTypes/Flash";
+
 type FormModel = {
     name: string,
     password: string
@@ -6,14 +8,14 @@ type FormModel = {
 type ErrorFormPartial = Partial<Record<"name" | "password", string>>;
 
 export type ComponentProps = {
-    isSmSize:       boolean,
-    isMdSize:       boolean,
-    data:           FormModel,
-    handleChange:   (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, key: FormUnion) => void,
-    submit:         (e: React.FormEvent<HTMLFormElement>) => void,
-    processing:     boolean,
-    errors:         ErrorFormPartial,
-    flash:          any | undefined
+    isSmSize:     boolean,
+    isMdSize:     boolean,
+    data:         FormModel,
+    handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, key: FormUnion) => void,
+    submit:       (e: React.FormEvent<HTMLFormElement>) => void,
+    processing:   boolean,
+    errors:       ErrorFormPartial,
+    flash:        Flash
 }
 
 export type FormUnion = "name" | "password";

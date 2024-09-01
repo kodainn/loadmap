@@ -1,11 +1,13 @@
+import Size from "@/commonTypes/Size"
+
 export type InertiaLinkButtonProps = {
-    size: "small" | "medium" | "large",
+    size: Size,
     href: string,
     name: string
 }
 
 export type ComponentProps = {
-    size: "small" | "medium" | "large",
+    size: Size,
     href: string,
     name: string
 }

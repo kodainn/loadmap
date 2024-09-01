@@ -1,8 +1,8 @@
-import Header from "@/Components/organisms/Header/Header";
-import Footer from "@/Components/organisms/Footer/Footer";
+import Header from "@/components/organisms/Header/Header";
+import Footer from "@/components/organisms/Footer/Footer";
 import { Box } from "@mui/material";
-import { FollowResponse } from "@/interfaces/FollowResponse";
-import FollowArticleList from "@/Components/organisms/FollowArticleList/FollowArticleList";
+import { FollowResponse } from "@/responseTypes/FollowResponse";
+import FollowArticleList from "@/components/organisms/FollowArticleList/FollowArticleList";
 
 const FollowLayout: React.FC<FollowResponse> = ({
     follow_articles

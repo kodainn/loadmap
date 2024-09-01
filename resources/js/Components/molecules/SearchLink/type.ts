@@ -1,7 +1,9 @@
+import Size from "@/commonTypes/Size"
+
 export type SearchLinkProps = {
-    size: "small" | "medium" | "large"
+    size: Size
 }
 
 export type ComponentProps = {
-    size: "small" | "medium" | "large"
+    size: Size
 }

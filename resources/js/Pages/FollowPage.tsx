@@ -1,5 +1,5 @@
-import FollowLayout from "@/Components/templates/FollowLayout"
-import { FollowResponse } from "@/interfaces/FollowResponse";
+import FollowLayout from "@/components/templates/FollowLayout"
+import { FollowResponse } from "@/responseTypes/FollowResponse";
 
 const FollowPage: React.FC<FollowResponse> = ({
     auth,

@@ -1,12 +1,9 @@
-type tag = {
-    id:   number,
-    name: string
-}
+import Tag from "@/commonTypes/Tag"
 
 export type MarkingTagListProps = {
-    marking_tags: tag[]
+    marking_tags: Tag[]
 }
 
 export type ComponentProps = {
-    marking_tags: tag[]
+    marking_tags: Tag[]
 }

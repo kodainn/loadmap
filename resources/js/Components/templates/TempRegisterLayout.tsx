@@ -1,4 +1,4 @@
-import TempRegisterForm from "@/Components/organisms/TempRegisterForm/TempRegisterForm";
+import TempRegisterForm from "@/components/organisms/TempRegisterForm/TempRegisterForm";
 
 const TempRegisterLayout: React.FC = () => {
     return (

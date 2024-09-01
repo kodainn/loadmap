@@ -1,8 +1,5 @@
-type tag = {
-    id:   number,
-    name: string
-};
+import Tag from "@/commonTypes/Tag";
 
-export type TagItemButtonProps = tag;
+export type TagItemButtonProps = Tag;
 
-export type ComponentProps = tag;
+export type ComponentProps = Tag;
