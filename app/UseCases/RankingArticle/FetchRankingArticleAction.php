@@ -9,7 +9,7 @@ use Carbon\Carbon;
 use Constants\QueryParamater;
 use Illuminate\Support\Facades\DB;
 
-class IndexAction
+class FetchRankingArticleAction
 {
     public function __invoke(
         Article $articleModel,

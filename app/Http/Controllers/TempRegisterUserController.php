@@ -4,13 +4,11 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\TempRegisterUser\StoreRequest;
+use App\Http\Requests\TempRegisterUser\StoreTempRegisterUserRequest;
 use App\Models\TempUser;
-use App\Models\User;
-use App\Usecases\TempRegisterUser\StoreAction;
+use App\Usecases\TempRegisterUser\StoreTempRegisterUserAction;
 use Exception;
 use Inertia\Inertia;
-use PDOException;
 
 class TempRegisterUserController extends Controller
 {
@@ -20,9 +18,9 @@ class TempRegisterUserController extends Controller
     }
 
     public function store(
-        StoreRequest $request,
-        StoreAction $action,
-        TempUser $tempUser
+        StoreTempRegisterUserRequest $request,
+        StoreTempRegisterUserAction  $action,
+        TempUser                     $tempUser
     )
     {
         try {

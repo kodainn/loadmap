@@ -6,7 +6,7 @@ namespace App\Usecases\MarkingTag;
 
 use App\Models\User;
 
-class IndexAction
+class FetchMarkingTagAction
 {
     public function __invoke(
         User $userModel,

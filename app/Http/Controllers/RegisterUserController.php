@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Models\WebNotice;
 use App\Usecases\RegisterUser\Exceptions\RegisteredUserException;
 use App\Usecases\RegisterUser\StoreAction;
+use App\Usecases\RegisterUser\StoreRegisterUserAction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
@@ -19,13 +20,13 @@ use PDOException;
 class RegisterUserController extends Controller
 {
     public function store(
-        Request           $request,
-        StoreAction       $action,
-        TempUser          $tempUser,
-        User              $user,
-        WebNotice         $webNotice,
-        SettingMailNotice $settingMailNotice,
-        Profile           $profile
+        Request                 $request,
+        StoreRegisterUserAction $action,
+        TempUser                $tempUser,
+        User                    $user,
+        WebNotice               $webNotice,
+        SettingMailNotice       $settingMailNotice,
+        Profile                 $profile
     )
     {
         if (! $request->hasValidSignature()) {

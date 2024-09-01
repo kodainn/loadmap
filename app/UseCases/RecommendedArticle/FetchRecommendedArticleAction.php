@@ -7,7 +7,7 @@ namespace App\Usecases\RecommendedArticle;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
-class IndexAction
+class FetchRecommendedArticleAction
 {
     public function __invoke(
         User $userModel,

@@ -10,7 +10,7 @@ use App\Models\TempUser;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
-class StoreAction
+class StoreTempRegisterUserAction
 {
     public function __invoke(
         StoreRequest $request,
