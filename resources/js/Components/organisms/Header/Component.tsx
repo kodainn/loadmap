@@ -1,9 +1,9 @@
 import { AppBar, Box, Typography } from "@mui/material";
-import SearchLink from "@/Components/atoms/SearchLink/Container";
+import SearchLink from "@/Components/molecules/SearchLink/Container";
 import NoticePopupButton from "@/Components/molecules/NoticePopupButton/Container";
 import AccountIconPopupButton from "@/Components/molecules/AccountIconPopupButton/Container";
-import InertiaLinkTab from "@/Components/atoms/InertiaLinkTab/Container";
-import InertiaLinkButton from "@/Components/atoms/InertiaLinkButton/Container";
+import InertiaLinkTab from "@/Components/molecules/InertiaLinkTab/Container";
+import InertiaLinkButton from "@/Components/molecules/InertiaLinkButton/Container";
 import { ComponentProps } from "./type";
 import { URL_PATH } from "@/constants/UrlPath";
 
@@ -17,18 +17,18 @@ const Component: React.FC<ComponentProps> = ({
 }) => {
 
     return (
-        <Box 
+        <Box
             sx={{
                 flexGrow: 1
             }}
         >
-            <AppBar 
+            <AppBar
                 sx={{
                     backgroundColor: 'white',
                     color: 'black'
                 }}
             >
-                <Box 
+                <Box
                     sx={{
                         display: scrollY != 0 ? 'none' : 'flex',
                         justifyContent: 'space-between',
@@ -43,7 +43,7 @@ const Component: React.FC<ComponentProps> = ({
                     >
                         AppName
                     </Typography>
-                    <Box 
+                    <Box
                         sx={{
                             display: 'flex',
                             alignItems: 'center',
@@ -59,7 +59,7 @@ const Component: React.FC<ComponentProps> = ({
                                 size={isSmSize ? "medium" : "large"}
                             />
                         }
-                        {false && 
+                        {false &&
                             <AccountIconPopupButton
                                 onClick={accountOnClick}
                                 size={isSmSize ? "medium" : "large"}
@@ -67,18 +67,18 @@ const Component: React.FC<ComponentProps> = ({
                         }
                         {true ?
                                 <>
-                                    <InertiaLinkButton 
+                                    <InertiaLinkButton
                                         size={isSmSize ? "small" : "large"}
                                         href="login"
                                         name="ログイン"
                                     />
-                                    <InertiaLinkButton 
+                                    <InertiaLinkButton
                                         size={isSmSize ? "small" : "large"}
                                         href={route("tempRegister.create")}
                                         name="新規登録"
                                     />
                                 </>:
-                                <InertiaLinkButton 
+                                <InertiaLinkButton
                                     size={isSmSize ? "small" : "large"}
                                     href={route("tempRegister.create")}
                                     name="投稿する"
@@ -86,24 +86,24 @@ const Component: React.FC<ComponentProps> = ({
                         }
                     </Box>
                 </Box>
-                <Box 
+                <Box
                     sx={{
                         display: 'flex',
                         overflowX: 'auto',
                         whiteSpace: 'nowrap',
                         }}
                 >
-                    <InertiaLinkTab 
-                        href={route('home.index')} 
-                        name="ホーム" 
+                    <InertiaLinkTab
+                        href={route('home.index')}
+                        name="ホーム"
                         isSelected={path === URL_PATH.HOME_PAGE_PATH}
                     />
-                    <InertiaLinkTab 
+                    <InertiaLinkTab
                         href={route('timeline.index')}
                         name="タイムライン"
                         isSelected={path === URL_PATH.TIMELINE_PAGE_PATH}
                     />
-                    <InertiaLinkTab 
+                    <InertiaLinkTab
                         href={route('follow.index')}
                         name="フォロー"
                         isSelected={path === URL_PATH.FOLLOW_PAGE_PATH}
