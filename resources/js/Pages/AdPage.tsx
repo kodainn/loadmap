@@ -1,4 +1,4 @@
-import AdLayout from "@/Components/templates/AdLayout"
+import AdLayout from "@/components/templates/AdLayout"
 
 const AdPage: React.FC = () => {
     return (

@@ -1,35 +1,15 @@
-type tag = {
-    id:   number,
-    name: string
-}
+import Article from "@/commonTypes/Article"
 
-type user = {
-    id:         number,
-    name:       string,
-    icon_path:  string | null,
-    first_name: string | null,
-    last_name:  string | null
-};
-
-type article = {
-    id:         number,
-    title:      string,
-    date_jp:    string,
-    like_count: number,
-    tags:       tag[],
-    user:       user
-}
-
-type recommended_article = {
+type RecommendedArticle = {
     id:       number,
     name:     string,
-    articles: article[]
+    articles: Article[]
 }
 
 export type RecommendedArticleListProps = {
-    recommended_articles: recommended_article[]
+    recommended_articles: RecommendedArticle[]
 }
 
 export type ComponentProps = {
-    recommended_articles: recommended_article[]
+    recommended_articles: RecommendedArticle[]
 }

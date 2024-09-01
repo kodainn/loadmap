@@ -1,5 +1,5 @@
-import HomeLayout from "@/Components/templates/HomeLayout";
-import { HomeResponse } from "@/interfaces/HomeResponse";
+import HomeLayout from "@/components/templates/HomeLayout";
+import { HomeResponse } from "@/responseTypes/HomeResponse";
 
 const HomePage: React.FC<HomeResponse> = ({
     auth,

@@ -1,10 +1,10 @@
-import Header from "@/Components/organisms/Header/Header";
-import { HomeResponse } from "@/interfaces/HomeResponse";
+import Header from "@/components/organisms/Header/Header";
+import { HomeResponse } from "@/responseTypes/HomeResponse";
 import { Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import MarkingTagList from "@/Components/organisms/MarkingTagList/MarkingTagList";
-import RecommendedArticleList from "@/Components/organisms/RecommendedArticleList/RecommendedArticleList";
-import RankingArticleList from "@/Components/organisms/RankingArticleList/RankingArticleList";
+import MarkingTagList from "@/components/organisms/MarkingTagList/MarkingTagList";
+import RecommendedArticleList from "@/components/organisms/RecommendedArticleList/RecommendedArticleList";
+import RankingArticleList from "@/components/organisms/RankingArticleList/RankingArticleList";
 
 const HomeLayout: React.FC<HomeResponse> = ({
     marking_tags,

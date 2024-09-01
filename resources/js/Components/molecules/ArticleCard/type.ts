@@ -1,25 +1,5 @@
-type tag = {
-    id:   number,
-    name: string
-}
+import Article from "@/commonTypes/Article";
 
-type user = {
-    id:         number,
-    name:       string,
-    icon_path:  string | null,
-    first_name: string | null,
-    last_name:  string | null
-};
+export type ArticleCardProps = Article;
 
-type article = {
-    id:         number,
-    title:      string,
-    date_jp:    string,
-    like_count: number,
-    tags:       tag[],
-    user:       user
-}
-
-export type ArticleCardProps = article;
-
-export type ComponentProps = article;
+export type ComponentProps = Article;

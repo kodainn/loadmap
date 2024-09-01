@@ -1,29 +1,9 @@
-type tag = {
-    id:   number,
-    name: string
-}
-
-type user = {
-    id:         number,
-    name:       string,
-    icon_path:  string | null,
-    first_name: string | null,
-    last_name:  string | null
-};
-
-type article = {
-    id:         number,
-    title:      string,
-    date_jp:    string,
-    like_count: number,
-    tags:       tag[],
-    user:       user
-}
+import Article from "@/commonTypes/Article"
 
 export type RankingArticleListProps = {
-    ranking_articles: article[]
+    ranking_articles: Article[]
 }
 
 export type ComponentProps = {
-    ranking_articles: article[]
+    ranking_articles: Article[]
 }

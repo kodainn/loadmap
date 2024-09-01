@@ -1,7 +1,7 @@
 export type ComponentProps = {
-    noticeOnClick: () => void,
+    noticeOnClick:  () => void,
     accountOnClick: () => void,
-    scrollY: number,
-    path: string,
-    isSmSize: boolean
+    scrollY:        number,
+    path:           string,
+    isSmSize:       boolean
 }
