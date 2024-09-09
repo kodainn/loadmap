@@ -22,14 +22,6 @@ class Article extends Model
         'creating_user_id'
     ];
 
-    protected $hidden = [
-        'creating_user_id',
-        'is_deleted',
-        'created_at',
-        'updated_at',
-        'pivot'
-    ];
-
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'creating_user_id');

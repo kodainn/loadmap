@@ -4,7 +4,7 @@ import { ArticleCardProps } from "./type";
 const ArticleCard: React.FC<ArticleCardProps> = ({
     id,
     title,
-    date_jp,
+    created_date_jp,
     like_count,
     tags,
     user
@@ -14,7 +14,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
         <Component
             id={id}
             title={title}
-            date_jp={date_jp}
+            created_date_jp={created_date_jp}
             like_count={like_count}
             tags={tags}
             user={user}

@@ -6,7 +6,7 @@ import TimelineArticleList from "@/components/organisms/TimelineArticleList/Time
 
 const TimelineLayout: React.FC<TimelineResponse> = ({
     auth,
-    errors,
+    error,
     flash,
     timeline_articles
 }) => {

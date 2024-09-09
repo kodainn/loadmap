@@ -3,16 +3,17 @@ import { HomeResponse } from "@/responseTypes/HomeResponse";
 
 const HomePage: React.FC<HomeResponse> = ({
     auth,
-    errors,
+    error,
     flash,
     marking_tags,
     ranking_articles,
     recommended_articles
 }) => {
+    console.log(recommended_articles);
     return (
         <HomeLayout
             auth={auth}
-            errors={errors}
+            error={error}
             flash={flash}
             marking_tags={marking_tags}
             ranking_articles={ranking_articles}

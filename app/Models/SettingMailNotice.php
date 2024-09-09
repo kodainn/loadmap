@@ -17,10 +17,4 @@ class SettingMailNotice extends Model
         'is_article_like_notice_enable',
         'is_article_comment_notice_enable'
     ];
-
-    protected $hidden = [
-        'user_id',
-        'created_at',
-        'updated_at'
-    ];
 }

@@ -11,7 +11,6 @@ const HomeLayout: React.FC<HomeResponse> = ({
     ranking_articles,
     recommended_articles
 }) => {
-    console.log(recommended_articles);
     return (
         <>
             <Header />

@@ -10,10 +10,4 @@ use Illuminate\Database\Eloquent\Model;
 class WebNoticeMessage extends Model
 {
     use HasFactory;
-
-    protected $hidden = [
-        'web_notice_id',
-        'created_at',
-        'updated_at'
-    ];
 }

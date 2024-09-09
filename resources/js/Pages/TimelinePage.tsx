@@ -3,14 +3,14 @@ import { TimelineResponse } from "@/responseTypes/TimelineResponse";
 
 const TimelinePage: React.FC<TimelineResponse> = ({
     auth,
-    errors,
+    error,
     flash,
     timeline_articles
 }) => {
     return (
         <TimelineLayout
             auth={auth}
-            errors={errors}
+            error={error}
             flash={flash}
             timeline_articles={timeline_articles}
         />
