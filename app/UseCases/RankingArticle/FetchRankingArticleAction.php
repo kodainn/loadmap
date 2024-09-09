@@ -7,14 +7,15 @@ namespace App\Usecases\RankingArticle;
 use App\Models\Article;
 use Carbon\Carbon;
 use Constants\QueryParamater;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\DB;
 
 class FetchRankingArticleAction
 {
     public function __invoke(
         Article $articleModel,
-        string $aggregationMethod = QueryParamater::RANKING_WEEKLY
-    ): array
+        string  $aggregationMethod = QueryParamater::RANKING_WEEKLY
+    ): Collection
     {
         $rankingArticles = [];
         //意図しないパラメータだったらデータを取得しない
@@ -31,14 +32,14 @@ class FetchRankingArticleAction
                 articles.id,
                 title,
                 articles.creating_user_id,
-                DATE_FORMAT(articles.created_at, '%Y年%m月%d日') as date_jp,
+                DATE_FORMAT(articles.created_at, '%Y年%m月%d日') as created_date_jp,
                 count(article_likes.article_id) as like_count"))
             ->join('article_likes', 'articles.id', '=', 'article_likes.article_id')
             ->groupByRaw("
                 articles.id,
                 title,
                 creating_user_id,
-                date_jp")
+                created_date_jp")
             ->with(['user', 'tags'])
             ->orderByRaw("like_count DESC")
             ->offset(0)
@@ -65,6 +66,6 @@ class FetchRankingArticleAction
             $rankingArticles = $baseQuery->get();
         }
 
-        return $rankingArticles->toArray();
+        return $rankingArticles;
     }
 }

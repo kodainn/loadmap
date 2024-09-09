@@ -6,7 +6,7 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 const Component: React.FC<ComponentProps> = ({
     id,
     title,
-    date_jp,
+    created_date_jp,
     like_count,
     tags,
     user
@@ -26,7 +26,7 @@ const Component: React.FC<ComponentProps> = ({
                             {user.name + " " + StringProcessor.getFullName(user.first_name, user.last_name)} 
                         </Typography>
                         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                            {date_jp}
+                            {created_date_jp}
                         </Typography>
                     </Box>
                 </Box>

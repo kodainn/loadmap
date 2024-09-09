@@ -4,15 +4,14 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Http\InertiaResponses\HomeResponse;
 use App\Models\Article;
-use App\Models\TagUser;
 use App\Models\User;
 use App\Usecases\MarkingTag\FetchMarkingTagAction;
 use App\Usecases\RankingArticle\FetchRankingArticleAction;
 use App\Usecases\RecommendedArticle\FetchRecommendedArticleAction;
 use Illuminate\Auth\AuthManager;
-use Illuminate\Support\Facades\Auth;
-use Inertia\Inertia;
+use Inertia\Response;
 
 class HomeController extends Controller
 {
@@ -22,17 +21,14 @@ class HomeController extends Controller
         FetchRecommendedArticleAction $fetchRecommendedArticleAction,
         FetchRankingArticleAction     $fetchRankingArticleAction,
         User                          $user,
-        Article                       $article
-    )
+        Article                       $article,
+        HomeResponse                  $response
+    ): Response
     {
         $markingTags = $fetchMarkingTagAction($user, $auth->guard()->id());
         $recommendedArticles = $fetchRecommendedArticleAction($user, $auth->guard()->id());
         $rankingArticles = $fetchRankingArticleAction($article);
 
-        return Inertia::render('HomePage', [
-            'marking_tags'         => $markingTags,
-            'recommended_articles' => $recommendedArticles,
-            'ranking_articles'     => $rankingArticles
-        ]);
+        return $response('HomePage', $markingTags, $recommendedArticles, $rankingArticles);
     }
 }

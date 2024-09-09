@@ -25,14 +25,6 @@ class User extends Authenticatable
         'last_name'
     ];
 
-    protected $hidden = [
-        'email',
-        'password',
-        'is_deleted',
-        'created_at',
-        'updated_at'
-    ];
-
     protected static function booted(): void
     {
         static::addGlobalScope(new UserScope);

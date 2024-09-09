@@ -2,12 +2,12 @@ import Tag from "./Tag";
 import User from "./User";
 
 type Article = {
-    id:         number,
-    title:      string,
-    date_jp:    string,
-    like_count: number,
-    tags:       Tag[],
-    user:       User
+    id:              number,
+    title:           string,
+    created_date_jp: string,
+    user:            User,
+    tags:            Tag[],
+    like_count:      number
 }
 
 export default Article;

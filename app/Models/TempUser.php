@@ -18,5 +18,4 @@ class TempUser extends Model
         'token'
     ];
     
-    
 }

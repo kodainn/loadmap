@@ -17,12 +17,6 @@ class WebNotice extends Model
         'last_read_datetime'
     ];
 
-    protected $hidden = [
-        'received_user_id',
-        'created_at',
-        'updated_at'
-    ];
-
     public function messages(): HasMany
     {
         return $this->hasMany(WebNoticeMessage::class);

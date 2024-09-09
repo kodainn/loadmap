@@ -18,14 +18,6 @@ class Tag extends Model
         'creating_user_id'
     ];
 
-    protected $hidden = [
-        'creating_user_id',
-        'is_deleted',
-        'created_at',
-        'updated_at',
-        'pivot'
-    ];
-
     protected static function booted(): void
     {
         static::addGlobalScope(new TagScope);
