@@ -7,7 +7,7 @@ type Article = {
     created_date_jp: string,
     user:            User,
     tags:            Tag[],
-    like_count:      number
+    likes_count:     number
 }
 
 export default Article;

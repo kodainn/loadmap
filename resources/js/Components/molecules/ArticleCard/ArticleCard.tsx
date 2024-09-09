@@ -5,7 +5,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
     id,
     title,
     created_date_jp,
-    like_count,
+    likes_count,
     tags,
     user
 }) => {
@@ -15,7 +15,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
             id={id}
             title={title}
             created_date_jp={created_date_jp}
-            like_count={like_count}
+            likes_count={likes_count}
             tags={tags}
             user={user}
         />
