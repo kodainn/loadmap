@@ -1,4 +1,4 @@
-import LoginLayout from "@/components/templates/LoginLayout";
+import LoginLayout from "@/Components/templates/LoginLayout";
 
 const LoginPage: React.FC = () => {
     return (

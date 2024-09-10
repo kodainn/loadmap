@@ -1,5 +1,5 @@
-import Header from "@/components/organisms/Header/Header";
-import Footer from "@/components/organisms/Footer/Footer";
+import Header from "@/Components/organisms/Header/Header";
+import Footer from "@/Components/organisms/Footer/Footer";
 import { Box } from "@mui/material";
 
 const AnnouncementLayout: React.FC = () => {

@@ -1,4 +1,4 @@
-import AnnouncementLayout from "@/components/templates/AnnouncementLayout";
+import AnnouncementLayout from "@/Components/templates/AnnouncementLayout";
 
 
 const AnnouncementPage: React.FC = () => {

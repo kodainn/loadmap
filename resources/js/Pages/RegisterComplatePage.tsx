@@ -1,4 +1,4 @@
-import RegisterComplateLayout from "@/components/templates/RegisterComplateLayout";
+import RegisterComplateLayout from "@/Components/templates/RegisterComplateLayout";
 
 const RegisterComplatePage: React.FC = () => {
     return (

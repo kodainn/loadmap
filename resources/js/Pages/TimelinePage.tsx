@@ -1,4 +1,4 @@
-import TimelineLayout from "@/components/templates/TimelineLayout";
+import TimelineLayout from "@/Components/templates/TimelineLayout";
 import { TimelineResponse } from "@/responseTypes/TimelineResponse";
 
 const TimelinePage: React.FC<TimelineResponse> = ({

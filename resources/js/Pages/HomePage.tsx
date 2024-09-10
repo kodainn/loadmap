@@ -1,4 +1,4 @@
-import HomeLayout from "@/components/templates/HomeLayout";
+import HomeLayout from "@/Components/templates/HomeLayout";
 import { HomeResponse } from "@/responseTypes/HomeResponse";
 
 const HomePage: React.FC<HomeResponse> = ({

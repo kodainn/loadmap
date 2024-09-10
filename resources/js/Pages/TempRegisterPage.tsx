@@ -1,4 +1,4 @@
-import TempRegisterLayout from "@/components/templates/TempRegisterLayout";
+import TempRegisterLayout from "@/Components/templates/TempRegisterLayout";
 
 const RegisterPage: React.FC = () => {
     return (
