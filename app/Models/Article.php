@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace App\Models;
 
-
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
 
 class Article extends Model
@@ -52,5 +51,16 @@ class Article extends Model
     public function tags(): BelongsToMany
     {
         return $this->belongsToMany(Tag::class);
+    }
+
+    public function indexSelect(): Builder
+    {
+        return $this->select(DB::raw("
+                articles.id,
+                title,
+                creating_user_id,
+                DATE_FORMAT(articles.created_at, '%Y年%m月%d日') as created_date_jp"))
+            ->with(['user', 'tags'])
+            ->withCount('likes');
     }
 }

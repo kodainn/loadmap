@@ -24,13 +24,7 @@ class FetchFollowUserArticleAction
             ->toArray();
 
         return $articleModel
-            ->select(DB::raw("
-                articles.id,
-                title,
-                creating_user_id,
-                DATE_FORMAT(articles.created_at, '%Y年%m月%d日') as created_date_jp"))
-            ->with(['user', 'tags'])
-            ->withCount('likes')
+            ->indexSelect()
             ->whereIn('creating_user_id', $followIds)
             ->get();
     }
