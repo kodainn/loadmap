@@ -9,7 +9,6 @@ const HomePage: React.FC<HomeResponse> = ({
     ranking_articles,
     recommended_articles
 }) => {
-    console.log(recommended_articles);
     return (
         <HomeLayout
             auth={auth}

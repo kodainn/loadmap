@@ -6,14 +6,14 @@ const Component: React.FC<ComponentProps> = ({ timeline_articles }) => {
     return (
         <Container>
             <Stack spacing={2}>
-                {timeline_articles.map(({ id, title, created_date_jp, like_count, tags, user }) => {
+                {timeline_articles.map(({ id, title, created_date_jp, likes_count, tags, user }) => {
                         return (
                             <ArticleCard
                                 key={id}
                                 id={id}
                                 title={title}
                                 created_date_jp={created_date_jp}
-                                like_count={like_count}
+                                likes_count={likes_count}
                                 tags={tags}
                                 user={user}
                             />

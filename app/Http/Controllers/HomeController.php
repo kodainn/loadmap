@@ -26,7 +26,7 @@ class HomeController extends Controller
     ): Response
     {
         $markingTags = $fetchMarkingTagAction($user, $auth->guard()->id());
-        $recommendedArticles = $fetchRecommendedArticleAction($user, $auth->guard()->id());
+        $recommendedArticles = $fetchRecommendedArticleAction($user, $article, $auth->guard()->id());
         $rankingArticles = $fetchRankingArticleAction($article);
 
         return $response('HomePage', $markingTags, $recommendedArticles, $rankingArticles);

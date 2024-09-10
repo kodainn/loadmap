@@ -9,14 +9,14 @@ const Component: React.FC<ComponentProps> = ({ ranking_articles }) => {
                 記事ランキング
             </Typography>
             <Stack spacing={2}>
-                {ranking_articles.map(({ id, title, created_date_jp, like_count, tags, user }) => {
+                {ranking_articles.map(({ id, title, created_date_jp, likes_count, tags, user }) => {
                         return (
                             <ArticleCard
                                 key={id}
                                 id={id}
                                 title={title}
                                 created_date_jp={created_date_jp}
-                                like_count={like_count}
+                                likes_count={likes_count}
                                 tags={tags}
                                 user={user}
                             />

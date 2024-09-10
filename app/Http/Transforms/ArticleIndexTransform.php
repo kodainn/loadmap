@@ -17,7 +17,7 @@ class ArticleIndexTransform implements Transform
             'created_date_jp' => (string) $model->created_date_jp,
             'user'            => (array)  UserIndexTransform::modelToArray($model->user),
             'tags'            => (array)  TagTransform::collectionToArray($model->tags),
-            'like_count'      => (int)    $model->like_count
+            'likes_count'     => (int)    $model->likes_count
         ];
     }
 

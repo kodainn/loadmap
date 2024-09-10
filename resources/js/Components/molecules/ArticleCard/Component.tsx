@@ -7,7 +7,7 @@ const Component: React.FC<ComponentProps> = ({
     id,
     title,
     created_date_jp,
-    like_count,
+    likes_count,
     tags,
     user
 }) => {
@@ -58,7 +58,7 @@ const Component: React.FC<ComponentProps> = ({
                     }}
                 >
                     <FavoriteBorderIcon fontSize="small" />
-                    {like_count}
+                    {likes_count}
                 </Box>
             </CardContent>
         </Card>
