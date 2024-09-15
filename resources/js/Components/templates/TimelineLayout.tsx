@@ -6,13 +6,11 @@ import TimelineArticleList from "@/Components/organisms/TimelineArticleList/Time
 
 const TimelineLayout: React.FC<TimelineResponse> = ({
     auth,
-    error,
-    flash,
     timeline_articles
 }) => {
     return (
         <>
-            <Header />
+            <Header auth={auth}/>
             <Box sx={{ margin: 20}}>
             </Box>
             <TimelineArticleList

@@ -1,11 +1,13 @@
 import Size from "@/commonTypes/Size"
 
 export type AccountIconPopupButtonProps = {
-    onClick: () => void,
     size:    Size
 }
 
 export type ComponentProps = {
-    onClick: () => void,
-    size:    Size
+    size:        Size,
+    anchorEl:    HTMLElement | null,
+    isOpen:      boolean,
+    handleClick: (event: React.MouseEvent<HTMLDivElement>) => void,
+    handleClose: () => void
 }

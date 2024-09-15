@@ -7,13 +7,14 @@ import RecommendedArticleList from "@/Components/organisms/RecommendedArticleLis
 import RankingArticleList from "@/Components/organisms/RankingArticleList/RankingArticleList";
 
 const HomeLayout: React.FC<HomeResponse> = ({
+    auth,
     marking_tags,
     ranking_articles,
     recommended_articles
 }) => {
     return (
         <>
-            <Header />
+            <Header auth={auth}/>
             <Box sx={{ margin: 20}}></Box>
             <Grid container spacing={5}>
                 <Grid xs={12} md={12} lg={2}>
