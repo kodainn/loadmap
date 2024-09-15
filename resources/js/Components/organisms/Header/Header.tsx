@@ -3,8 +3,9 @@ import Component from "./Component";
 import { usePage } from "@inertiajs/react";
 import { useMediaQuery } from "@mui/material";
 import { BREAK_POINT } from "@/constants/BreakPoint";
+import { ContainerProps } from "./type";
 
-const Header: React.FC = () => {
+const Header: React.FC<ContainerProps> = ({ auth }) => {
 
     const testClick = () => alert(1);
     const scrollY = useScrollY();
@@ -15,10 +16,10 @@ const Header: React.FC = () => {
     return (
         <Component
             noticeOnClick={testClick}
-            accountOnClick={testClick}
             scrollY={scrollY}
             path={path}
             isSmSize={isSmSize}
+            auth={auth}
         />
     );
 }

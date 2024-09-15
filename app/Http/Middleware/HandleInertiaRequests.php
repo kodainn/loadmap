@@ -1,11 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Middleware;
 
 use App\Http\Transforms\UserIndexTransform;
 use Constants\FlashMsgKey;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
+use stdClass;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -34,7 +37,7 @@ class HandleInertiaRequests extends Middleware
         return [
             ...parent::share($request),
             'auth' => [
-                'user' => $request->user() ? UserIndexTransform::modelToArray($request->user()) : [],
+                'user' => $request->user() ? UserIndexTransform::modelToArray($request->user()) : null,
             ],
             'flash' => [
                 FlashMsgKey::ERROR_MESSAGE => fn () => $request->session()->get(FlashMsgKey::ERROR_MESSAGE),

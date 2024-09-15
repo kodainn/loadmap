@@ -1,6 +1,4 @@
 import Auth from "@/commonTypes/Auth";
-import Error from "@/commonTypes/Error";
-import Flash from "@/commonTypes/Flash";
 import Tag from "@/commonTypes/Tag";
 import Article from "@/commonTypes/Article";
 
@@ -16,8 +14,6 @@ type RecommendedArticle = {
 
 export type HomeResponse = {
     auth:                 Auth,
-    error:                Error,
-    flash:                Flash,
     marking_tags:         MarkingTags,
     ranking_articles:     RankingArticles,
     recommended_articles: RecommendedArticle[]

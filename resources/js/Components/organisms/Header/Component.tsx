@@ -6,16 +6,16 @@ import InertiaLinkTab from "@/Components/molecules/InertiaLinkTab/InertiaLinkTab
 import InertiaLinkButton from "@/Components/molecules/InertiaLinkButton/InertiaLinkButton";
 import { ComponentProps } from "./type";
 import { URL_PATH } from "@/constants/UrlPath";
+import Authentication from "@/utils/Authentication";
 
 
 const Component: React.FC<ComponentProps> = ({
     noticeOnClick,
-    accountOnClick,
     scrollY,
     path,
-    isSmSize
+    isSmSize,
+    auth
 }) => {
-
     return (
         <Box
             sx={{
@@ -30,7 +30,7 @@ const Component: React.FC<ComponentProps> = ({
             >
                 <Box
                     sx={{
-                        display: scrollY != 0 ? 'none' : 'flex',
+                        display: scrollY !== 0 ? 'none' : 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'center',
                         marginTop: 2,
@@ -53,19 +53,33 @@ const Component: React.FC<ComponentProps> = ({
                         <SearchLink
                             size={isSmSize ? "medium" : "large"}
                         />
-                        {false &&
+                        {Authentication.isLogin(auth) &&
                             <NoticePopupButton
                                 onClick={noticeOnClick}
                                 size={isSmSize ? "medium" : "large"}
                             />
                         }
-                        {false &&
+                        {Authentication.isLogin(auth) &&
                             <AccountIconPopupButton
-                                onClick={accountOnClick}
                                 size={isSmSize ? "medium" : "large"}
                             />
                         }
-                        {true ?
+                        {Authentication.isLogin(auth) ?
+                            (  
+                                <>
+                                    <InertiaLinkButton
+                                        size={isSmSize ? "small" : "large"}
+                                        href="logout"
+                                        name="ログアウト"
+                                    />
+                                    <InertiaLinkButton
+                                        size={isSmSize ? "small" : "large"}
+                                        href={route("tempRegister.create")}
+                                        name="投稿する"
+                                    />
+                                </>
+                            ):
+                            (
                                 <>
                                     <InertiaLinkButton
                                         size={isSmSize ? "small" : "large"}
@@ -77,12 +91,8 @@ const Component: React.FC<ComponentProps> = ({
                                         href={route("tempRegister.create")}
                                         name="新規登録"
                                     />
-                                </>:
-                                <InertiaLinkButton
-                                    size={isSmSize ? "small" : "large"}
-                                    href={route("tempRegister.create")}
-                                    name="投稿する"
-                                />
+                                </>
+                            )
                         }
                     </Box>
                 </Box>
@@ -93,21 +103,27 @@ const Component: React.FC<ComponentProps> = ({
                         whiteSpace: 'nowrap',
                         }}
                 >
-                    <InertiaLinkTab
-                        href={route('home.index')}
-                        name="ホーム"
-                        isSelected={path === URL_PATH.HOME_PAGE_PATH}
-                    />
+                    {Authentication.isLogin(auth) &&
+                    (
+                        <InertiaLinkTab
+                            href={route('home.index')}
+                            name="ホーム"
+                            isSelected={path === URL_PATH.HOME_PAGE_PATH}
+                        />
+                    )}
                     <InertiaLinkTab
                         href={route('timeline.index')}
                         name="タイムライン"
                         isSelected={path === URL_PATH.TIMELINE_PAGE_PATH}
                     />
-                    <InertiaLinkTab
-                        href={route('follow.index')}
-                        name="フォロー"
-                        isSelected={path === URL_PATH.FOLLOW_PAGE_PATH}
-                    />
+                    {Authentication.isLogin(auth) && 
+                    (
+                        <InertiaLinkTab
+                            href={route('follow.index')}
+                            name="フォロー"
+                            isSelected={path === URL_PATH.FOLLOW_PAGE_PATH}
+                        />
+                    )}
                     <InertiaLinkTab
                         href={route('ad.index')}
                         name="広告"
